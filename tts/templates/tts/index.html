@@ -1,0 +1,85 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+{% load static %}
+<link rel="stylesheet" href="{% static 'site.css' %}">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+<div class="card">
+    <form id = "text-form" action="{% url 'tts' %}" method="post">
+    {% csrf_token %}
+
+            <textarea name= "text" class="modern-textarea" id ="text_area" placeholder = "Welcome, enter some text to try it out..."></textarea>
+            <button type="submit "id="process_text" class="btn">Generate TTS</button>
+
+
+        <audio id="audio_player" style="border-radius:10px;opacity:0.85;"controls >
+            <source src="" type="audio/wav">
+        </audio>
+
+    </form>
+    </audio>
+</div>
+
+<script>
+document.getElementById("text_area").addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("process_text").click();
+  }
+});
+</script>
+
+<script>
+    var form = document.querySelector('form');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', form.action, true);
+        xhr.setRequestHeader("X-CSRFToken", document.getElementsByName("csrfmiddlewaretoken")[0].value);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.responseType = 'arraybuffer';
+        xhr.onload = function() {
+            if (this.status === 200) {
+                var audioElement = document.querySelector('audio');
+                var blob = new Blob([xhr.response], { type: 'audio/wav' });
+                audioElement.src = URL.createObjectURL(blob);
+                audioElement.play();
+            }
+        };
+        var textarea = document.querySelector('textarea');
+        var text = encodeURIComponent(textarea.value);
+        xhr.send("text=" + text);
+    });
+</script>
+
+<div>&nbsp</div>
+
+<div class="second_card">
+    <h5 style="cursor:default"class="second_card-title">&#x1F680; In The Works</h5>
+    <hr style="height:1px;border:none;color:black;background-color:black;width:75%;margin:0 auto;margin-top:10px" />
+    <div class="flex-container">
+        <div class="flex-item">
+            <span class="material-icons md-48" style="cursor:default;" title="Training new, unique and diverse voices">diversity_3
+            </span>
+
+
+
+        </div>
+        <div class="flex-item">
+            <span class="material-icons md-48" style="cursor:default;" title="Translation options">translate</span>
+
+
+        </div>
+        <div class="flex-item">
+            <span class="material-icons md-48" style="cursor:default;" title="Adding PDF and other file formats!">picture_as_pdf</span>
+
+        </div>
+
+    </div>
+
+
+
+</div>
