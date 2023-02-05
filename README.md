@@ -51,7 +51,7 @@ This is an example of how to list things you need to use the software and how to
   pip install django
   ```
   
-  <a href=" https://www.tabnine.com/blog/how-to-create-django-projects-in-pycharm-community-edition/">View Demo</a>
+  <a href="https://www.tabnine.com/blog/how-to-create-django-projects-in-pycharm-community-edition/">View Demo</a>
  
 
 <!-- USAGE EXAMPLES -->
