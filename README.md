@@ -19,12 +19,10 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/kenny-witzenman/]
 
 
 
-<!-- PROJECT LOGO -->
-<br />
+
 <div align="center">
   <a href="https://github.com/lovetocode14/lets_learn">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
@@ -37,7 +35,7 @@
     <br />
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+ 
   </p>
 </div>
 
