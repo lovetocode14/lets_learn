@@ -25,7 +25,6 @@
 
 <div align="center">
   <a href="https://github.com/lovetocode14/lets_learn">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Lets_Learn</h3>
@@ -38,22 +37,6 @@
  
   </p>
 </div>
-
-
-
-
-
-
-
-
-
-
-### Built With
-
-* [![PyCharm][PyCharm]][Pycharm-url]
-* [![JQuery][JQuery]][JQuery-url]
-* [![Django][Django]][Django-url]
-
 
 
 <!-- GETTING STARTED -->
@@ -70,10 +53,6 @@ This is an example of how to list things you need to use the software and how to
   
   <a href=" https://www.tabnine.com/blog/how-to-create-django-projects-in-pycharm-community-edition/">View Demo</a>
  
-
-
-
-
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -92,13 +71,6 @@ This is an example of how to list things you need to use the software and how to
 - [ ] Training, unique new voices
 - [ ] File format support, PDF, etc
   
-
-
-
-
-
-
-
 
 
 <!-- CONTACT -->
